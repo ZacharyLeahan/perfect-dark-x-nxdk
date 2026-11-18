@@ -1,0 +1,48 @@
+{
+  "captured_on": "2026-11-18",
+  "emulator": "XEMU 0.8.136",
+  "method": "CUA native app screenshots; crop title bar, resize uniformly; synchronized by sample index, not simulation time",
+  "scene": "dataDyne Defection rooftop, Agent, stock textures",
+  "timing": "step-through presentation; 900 ms per sample; not real-time footage",
+  "builds": {
+    "before": {
+      "xbe": "default-before-controls.xbe",
+      "sha256": "c612f4fe1646610da098c5a6c300997a1d084e31a5a6b91b592b3cb67d8d6292"
+    },
+    "after": {
+      "xbe": "default-finals-combat.xbe",
+      "sha256": "9dfe0e5090fd0eef6d36c7c040f39e7965b5832c5b8f2cc3c9e238db94dca747"
+    }
+  },
+  "clips": [
+    {
+      "file": "b-button.gif",
+      "samples_per_side": 4,
+      "requested_pulse_ms": 160,
+      "source_before": "steps-before-crouch",
+      "source_after": "steps-after-crouch"
+    },
+    {
+      "file": "turning.gif",
+      "samples_per_side": 6,
+      "requested_pulse_ms": 120,
+      "source_before": "steps-before-look",
+      "source_after": "steps-after-look"
+    },
+    {
+      "file": "quick-melee.gif",
+      "samples_per_side": 7,
+      "requested_pulse_ms": 180,
+      "source_before": "steps-before-melee",
+      "source_after": "steps-after-melee"
+    }
+  ],
+  "limitations": [
+    "Independent launches; no identical save-state or frame alignment",
+    "Keyboard controller uses full stick deflection; not analog feel qualification",
+    "Before turn/RS captures start unarmed; after starts with pistol",
+    "Melee samples show unarmed selection and pistol restoration but miss the strike animation",
+    "Aimed-strafe captures were not usable and are not included",
+    "Two monitor capture attempts stalled and are excluded"
+  ]
+}
